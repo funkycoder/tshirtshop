@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="windows-1252">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
-</html>
+<?php
+
+// Include utility files
+require_once 'include/config.php';
+// Load ErrorHandler class
+require_once BUSINESS_DIR.'ErrorHandler.php';
+// Set the ErrorHandler
+ErrorHandler::SetHandler();
+
+// Load the app lication page template
+require_once PRESENTATION_DIR . 'application.php';
+
+// Load Smarty template file
+$application = new Application();
+// Display the page
+$application->display('store_front.tpl');
+// Try to load inexistent file
+require_once 'inexistent_file.php';
