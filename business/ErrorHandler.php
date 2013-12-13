@@ -1,5 +1,6 @@
 <?php
 
+// TODO Check how this thing handler PDOException : Error and Exception are two different things :)
 class ErrorHandler {
 
     // Private constructor to prevent direct creation of object
